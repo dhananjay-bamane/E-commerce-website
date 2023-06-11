@@ -1,0 +1,67 @@
+<!-- <?php
+
+$con=new mysqli("localhost","root","","ecommerce");
+
+$result=$con->query("SELECT * FROM `ecommerce`");
+
+foreach ($result as $value) {
+    echo $value['id'];
+    echo "<br>";
+    echo $value['username'];
+    echo "<br>";
+    echo $value['password'];
+    echo "<br>";
+}
+
+$username=$_POST['username'];
+$pass=$_POST['password'];
+
+if(isset($_POST['submit'])) {
+    $res=$con->query("INSERT INTO `ecommerce`(`username`, `password`) VALUES ('$username','$pass')");
+}
+if($res){
+    echo "success!!";
+}
+
+?> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rymo.</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section id="login">
+        <div class="center">
+            <img src="img/rymo..png" alt="">
+            <form method="post">
+                <div class="login">
+                    <input type="text" required>
+                    <span></span>
+                    <label>Username</label>
+                </div>
+                <div class="login">
+                    <input type="password" required>
+                    <span></span>
+                    <label>Password</label>
+                </div>
+                <div class="pass">Forgot Password ?</div>
+                <a href="index.html">
+                    <input type="button" value="Login">
+                </a>
+                <div class="signup">
+                    Not a member ? <a href="signup.html">Signup</a>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+</html>
